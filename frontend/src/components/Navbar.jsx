@@ -16,6 +16,7 @@ const navItems = [
   { name: 'About', link: '#about' },
   { name: 'Resume', link: '#resume' },
   { name: 'Projects', link: '#projects' },
+  { name: 'OJT', link: '#ojt' },
   { name: 'Contact', link: '#contact' },
 ]
 
