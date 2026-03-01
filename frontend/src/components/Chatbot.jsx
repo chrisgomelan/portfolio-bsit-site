@@ -88,7 +88,7 @@ export default function Chatbot() {
                     { messages.length === 0 && (
                         <div className="chat-bubble flex items-start">
                             <img src="/christian.png" alt="Chris" className="w-8 h-8 rounded-full inline-block mr-2"/>
-                            <p className="bg-gray-200 p-3 rounded-lg mb-2">Hello! I'm Chris, your AI assistant. How can I help you today?</p>
+                            <p className="bg-gray-200 p-3 rounded-lg mb-2">Hey! Ask me anything about Christian — his skills, projects, or experience.</p>
                         </div>
                     )}
 
