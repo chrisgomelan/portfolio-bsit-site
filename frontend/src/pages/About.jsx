@@ -29,10 +29,24 @@ function About() {
       <FadeInOnScroll className="max-w-5xl gap-4 mx-auto text-center px-3 sm:px-4 flex flex-col md:flex-row md:space-x-8">
         <div className="w-full md:w-3/4 left-about flex flex-col items-center md:items-start mb-6 md:mb-0">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">About Me</h2>
-          <p className="mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm md:text-base lg:text-lg font-[400] text-gray-600 text-start">
-            Hi, I'm Christian — a full-stack developer and current Web Developer Intern at Vite SEO Digital Advertising OPC, where I specialize in custom WordPress development, child themes, PHP logic, and technical SEO. Beyond my internship, I build robust web applications using React, Laravel, and Tailwind CSS. As a freelance developer I created Repair Hub, a full-stack Service Marketplace PWA with real-time booking and automated technician assignments, and my portfolio also includes a capstone Library Management System and the official website for a Catholic school in Taguig.
+          
+          <img src="/christian.png" alt="Christian's Profile" className="mx-auto md:mx-0 rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 object-cover mb-4 sm:mb-6" />
+
+          <p className="mb-3 sm:mb-4 text-sm sm:text-base md:text-lg font-medium text-gray-800 text-start">
+            Hi, I'm Christian — a full-stack developer based in Taguig City.
           </p>
-          <img src="/christian.png" alt="Christian's Profile" className="mx-auto rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover mb-4 sm:mb-6 md:mb-8" />
+
+          <p className="mb-3 sm:mb-4 text-xs sm:text-sm md:text-base text-gray-600 text-start leading-relaxed">
+            Currently a <span className="font-semibold text-gray-800">Web Developer Intern at Vite SEO Digital Advertising OPC</span>, specializing in custom WordPress development, child themes, PHP logic, and technical SEO.
+          </p>
+
+          <p className="mb-3 sm:mb-4 text-xs sm:text-sm md:text-base text-gray-600 text-start leading-relaxed">
+            I build web applications using <span className="font-semibold text-gray-800">React, Laravel, and Tailwind CSS</span>. As a freelance developer, I created <span className="font-semibold text-gray-800">Repair Hub</span> — a full-stack Service Marketplace PWA with real-time booking and automated technician assignments.
+          </p>
+
+          <p className="mb-4 sm:mb-6 text-xs sm:text-sm md:text-base text-gray-600 text-start leading-relaxed">
+            My portfolio also includes a capstone <span className="font-semibold text-gray-800">Library Management System</span> and the official website for a <span className="font-semibold text-gray-800">Catholic school in Taguig</span>.
+          </p>
           
           <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center md:justify-start">
 
