@@ -30,35 +30,40 @@ export default async (req) => {
     });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
 
   if (!apiKey) {
-    console.error("GEMINI_API_KEY is not set");
-    return new Response(JSON.stringify({ error: "Gemini API not configured" }), {
+    console.error("GROQ_API_KEY is not set");
+    return new Response(JSON.stringify({ error: "AI API not configured" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
   }
 
   try {
-    const prompt = `${SYSTEM_CONTEXT}\n\nUser question: ${message}`;
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-        }),
-      }
-    );
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: "llama-3.3-70b-versatile",
+        messages: [
+          { role: "system", content: SYSTEM_CONTEXT },
+          { role: "user", content: message },
+        ],
+        max_tokens: 512,
+        temperature: 0.7,
+      }),
+    });
 
     const data = await response.json();
-    console.log("Gemini API response:", JSON.stringify(data, null, 2));
+    console.log("Groq API response:", JSON.stringify(data, null, 2));
 
     let reply = "No response received";
-    if (data.candidates && data.candidates.length > 0) {
-      reply = data.candidates[0]?.content?.parts?.[0]?.text || reply;
+    if (data.choices && data.choices.length > 0) {
+      reply = data.choices[0]?.message?.content || reply;
     } else if (data.error) {
       reply = `Error: ${data.error.message || JSON.stringify(data.error)}`;
     }
@@ -68,7 +73,7 @@ export default async (req) => {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Gemini error:", error);
+    console.error("Groq error:", error);
     return new Response(JSON.stringify({ error: error.message || "Failed to generate response" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
