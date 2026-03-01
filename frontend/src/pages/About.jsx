@@ -30,7 +30,7 @@ function About() {
         <div className="w-full md:w-3/4 left-about flex flex-col items-center md:items-start mb-6 md:mb-0">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">About Me</h2>
           <p className="mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm md:text-base lg:text-lg font-[400] text-gray-600 text-start">
-            "Hi I'm Christian - a passionate full-stack developer dedicated to crafting scalable and efficient web solutions. With a strong foundation in both front-end and back-end technologies, I thrive on turning complex problems into seamless user experiences."
+            Hi, I'm Christian — a full-stack developer and current Web Developer Intern at Vite SEO Digital Advertising OPC, where I specialize in custom WordPress development, child themes, PHP logic, and technical SEO. Beyond my internship, I build robust web applications using React, Laravel, and Tailwind CSS. As a freelance developer I created Repair Hub, a full-stack Service Marketplace PWA with real-time booking and automated technician assignments, and my portfolio also includes a capstone Library Management System and the official website for a Catholic school in Taguig.
           </p>
           <img src="/christian.png" alt="Christian's Profile" className="mx-auto rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover mb-4 sm:mb-6 md:mb-8" />
           

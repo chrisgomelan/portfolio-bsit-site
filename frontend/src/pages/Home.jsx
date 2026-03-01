@@ -18,8 +18,18 @@ text={["Hey, I'm Christian.", "Crafting scalable web solutions", "Let's build so
             textColors={["#FFFFFF"]}
           />
         </h1>
+        <div className="mb-4 sm:mb-6 flex justify-center">
+          <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded-full bg-green-500/20 text-green-400 border border-green-500/30 backdrop-blur-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            Hired — Web Developer Intern at Vite SEO
+          </span>
+        </div>
         <p className="mb-6 sm:mb-8 md:mb-12 max-w-2xl text-sm sm:text-base md:text-lg text-gray-100 mx-auto">
-          Full-stack developer turning ideas into interactive experiences. Passionate about clean code and great design.        </p>
+          Full-stack developer turning ideas into interactive experiences. Passionate about clean code and great design.
+        </p>
         <a href="#projects" className="inline-block px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold bg-slate-600 hover:bg-slate-700 text-white rounded-md transition">
           View My Projects
         </a>

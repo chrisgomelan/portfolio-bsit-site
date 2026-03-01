@@ -4,6 +4,7 @@ import About from './pages/About'
 import Resume from './pages/Resume'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import Ojt from './pages/Ojt'
 import Navbar from './components/Navbar.jsx'
 import Chatbot from './components/Chatbot'
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Resume />
       <Projects />
+      <Ojt />
       <Contact />
       <Chatbot />
     </div>

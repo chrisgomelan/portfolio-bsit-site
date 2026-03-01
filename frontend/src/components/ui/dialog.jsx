@@ -92,3 +92,5 @@ export {
   DialogTitle,
   DialogDescription,
 }
+
+export default Dialog
