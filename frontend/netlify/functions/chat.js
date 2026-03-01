@@ -41,16 +41,14 @@ export default async (req) => {
   }
 
   try {
+    const prompt = `${SYSTEM_CONTEXT}\n\nUser question: ${message}`;
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          system_instruction: {
-            parts: [{ text: SYSTEM_CONTEXT }],
-          },
-          contents: [{ parts: [{ text: message }] }],
+          contents: [{ parts: [{ text: prompt }] }],
         }),
       }
     );
