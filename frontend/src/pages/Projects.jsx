@@ -11,10 +11,11 @@ function Projects() {
             Featured Projects
           </h2>
         </FadeInOnScroll>
+        <FadeInOnScroll delay={0.2}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 place-items-center">
-            {projects.filter(project => project.featured).map((project, index) => (
-            <FadeInOnScroll key={project.id} delay={index * 0.1} direction="up">
+            {projects.filter(project => project.featured).map(project => (
             <CardFlip
+              key={project.id}
               title={project.title}
               subtitle={project.company}
               description={project.description}
@@ -22,9 +23,9 @@ function Projects() {
               live={project.live}
               image={project.image}
             />
-            </FadeInOnScroll>
           ))}
-        </div>
+          </div>
+        </FadeInOnScroll>
       </div>
     </section>
   )
