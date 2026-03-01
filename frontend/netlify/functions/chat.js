@@ -30,7 +30,7 @@ export default async (req) => {
     });
   }
 
-  const apiKey = Netlify.env.get("GEMINI_API_KEY");
+  const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) {
     console.error("GEMINI_API_KEY is not set");
