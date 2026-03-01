@@ -27,13 +27,13 @@ function About() {
   return (
     <section id="about" className="min-h-[50vh] sm:min-h-[40vh] md:min-h-[40vh] sm:p-8 md:p-8 flex items-center justify-center py-8 sm:py-12 md:py-16">
       <FadeInOnScroll className="max-w-5xl gap-4 mx-auto text-center px-3 sm:px-4 flex flex-col md:flex-row md:space-x-8">
-        <div className="w-full md:w-3/4 left-about flex flex-col items-center md:items-start mb-6 md:mb-0">
+        <div className="w-full md:w-3/4 left-about flex flex-col items-center md:items-center mb-6 md:mb-0">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">About Me</h2>
           
           <img src="/christian.png" alt="Christian's Profile" className="mx-auto md:mx-0 rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 object-cover mb-4 sm:mb-6" />
 
           <p className="mb-3 sm:mb-4 text-sm sm:text-base md:text-lg font-medium text-gray-800 text-start">
-            Hi, I'm Christian — a full-stack developer based in Taguig City.
+            Hi, I'm Christian — a web developer based in Taguig City.
           </p>
 
           <p className="mb-3 sm:mb-4 text-xs sm:text-sm md:text-base text-gray-600 text-start leading-relaxed">
