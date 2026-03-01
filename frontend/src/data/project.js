@@ -59,6 +59,24 @@ export const education = [
 export const projects = [
   {
     id: 1,
+    title: "Repair Hub",
+    company: "Freelance",
+    description: "A robust, web-based platform designed to connect customers with certified repair shops and technicians. Features a comprehensive end-to-end service lifecycle, from business discovery and real-time booking to automated technician assignments.",
+    features: [
+      "Real-Time Booking System",
+      "Automated Technician Assignments",
+      "Business Discovery & Listings",
+      "Progressive Web App",
+      "API Development",
+      "End-to-End Service Lifecycle"
+    ],
+    technologies: ["Laravel", "PHP", "JavaScript", "Tailwind CSS", "Alpine.js", "PWA", "API"],
+    image: "/images/repair-hub.png",
+    live: "https://sandybrown-curlew-801364.hostingersite.com/",
+    featured: true
+  },
+  {
+    id: 2,
     title: "BPS E-Library PWA",
     company: "Bicutan Parochial School, inc.",
     description: "A comprehensive library management system built with modern web technologies featuring Progressive Web App capabilities.",
@@ -77,7 +95,7 @@ export const projects = [
     image: "/images/elib.png"
   },
   {
-    id: 2,
+    id: 3,
     title: "BPS Library Management System",
     company: "Bicutan Parochial School, inc.",
     description: "Full-stack library management system with RFID/barcode technology for book circulation and attendance monitoring.",
@@ -94,7 +112,7 @@ export const projects = [
     featured: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "BPS Official Website",
     company: "Bicutan Parochial School, inc.",
     description: "Catholic school's official website with custom layouts and modern design.",
@@ -111,7 +129,7 @@ export const projects = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "Process Scheduler System",
     company: "School Group Project",
     description: "Process scheduler application built with C++ for efficient task management.",
