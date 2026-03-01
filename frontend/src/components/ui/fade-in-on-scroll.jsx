@@ -1,9 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-export function FadeInOnScroll({ children, className }) {
+export function FadeInOnScroll({ children, className, delay = 0, direction = 'up' }) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const directionOffset = {
+    up: { y: 30 },
+    down: { y: -30 },
+    left: { x: 30 },
+    right: { x: -30 },
+  };
+
+  const initial = { opacity: 0, ...directionOffset[direction] };
+  const animate = isVisible ? { opacity: 1, x: 0, y: 0 } : initial;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,9 +36,9 @@ export function FadeInOnScroll({ children, className }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      initial={initial}
+      animate={animate}
+      transition={{ duration: 0.5, ease: 'easeOut', delay }}
       className={className}
     >
       {children}
