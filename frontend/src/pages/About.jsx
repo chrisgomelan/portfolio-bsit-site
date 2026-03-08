@@ -40,7 +40,7 @@ function About() {
       <div className="max-w-6xl mx-auto px-4 relative z-10">
 
         {/* TOP SECTION: THE FLIPPABLE CARD & PORTRAIT */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-center mb-20">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-center lg:items-center mb-20">
 
           {/* LEFT: ID CARD CONTAINER */}
           <div className="w-full lg:w-[60%] perspective-2000 group">
@@ -49,14 +49,14 @@ function About() {
               onClick={() => setIsFlipped(!isFlipped)}
             >
               {/* FRONT SIDE */}
-              <div className="absolute inset-0 backface-hidden bg-[#5ba4ca] rounded-[1.5rem] sm:rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] p-6 sm:p-10 flex flex-col justify-between border-b-[10px] border-r-[10px] border-black/15">
+              <div className="absolute inset-0 backface-hidden bg-[#5ba4ca] rounded-[1.5rem] sm:rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] p-5 sm:p-10 flex flex-col justify-between border-b-[6px] sm:border-b-[10px] border-r-[6px] sm:border-r-[10px] border-black/15">
                 <div className="flex justify-between items-start">
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center text-[10px] font-black">i</div>
                       <span className="text-[10px] sm:text-xs font-black border-2 border-black px-2 py-0.5 tracking-tighter bg-white/10">CARD</span>
                     </div>
-                    <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-black leading-[0.85] tracking-tighter uppercase">
+                    <h2 className="text-3xl sm:text-6xl md:text-7xl font-black text-black leading-[0.85] tracking-tighter uppercase">
                       CHRISTIAN <br /> GOMELAN
                     </h2>
                   </div>
@@ -82,7 +82,7 @@ function About() {
 
                 </div>
 
-                <div className="flex justify-between items-end mt-8 border-t-2 border-black/10 pt-4">
+                <div className="flex justify-between items-end mt-4 sm:mt-8 border-t-2 border-black/10 pt-4">
                   <div className="flex items-center gap-4">
                     <div className="flex flex-col items-center">
                       <span className="text-[8px] font-black rotate-90 mb-2 opacity-50">SIGNATURE</span>
@@ -94,13 +94,13 @@ function About() {
                       ● Specializing in building scalable web applications with React and Laravel. focused on clean architecture and technical optimization.
                     </p>
                   </div>
-                  <div className="text-[12px] font-black bg-black text-[#5ba4ca] px-2 py-0.5 rounded-sm transform -rotate-3">VERIFIED</div>
+                  <div className="text-[10px] sm:text-[12px] font-black bg-black text-[#5ba4ca] px-2 py-0.5 rounded-sm transform -rotate-3">VERIFIED</div>
                 </div>
               </div>
 
               {/* BACK SIDE */}
-              <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#5ba4ca] rounded-[1.5rem] sm:rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] p-6 sm:p-10 flex flex-col justify-between border-b-[10px] border-r-[10px] border-black/15 overflow-hidden">
-                <div className="relative z-10 flex gap-8 h-full">
+              <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#5ba4ca] rounded-[1.5rem] sm:rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] p-5 sm:p-10 flex flex-col justify-between border-b-[6px] sm:border-b-[10px] border-r-[6px] sm:border-r-[10px] border-black/15 overflow-hidden">
+                <div className="relative z-10 flex gap-4 sm:gap-8 h-full">
                   <div className="flex-grow flex flex-col justify-between">
                     <div className="space-y-6">
                       <div className="flex items-center gap-3">
@@ -125,21 +125,21 @@ function About() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col items-center justify-center gap-6 border-l border-black/10 pl-8">
-                    <div className="bg-white p-3 rounded-xl shadow-inner border border-black/5 flex flex-col items-center">
+                  <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 border-l border-black/10 pl-4 sm:pl-8">
+                    <div className="bg-white p-2 sm:p-3 rounded-xl shadow-inner border border-black/5 flex flex-col items-center">
                       {/* QR CODE MOCK */}
-                      <div className="w-20 h-20 sm:w-28 sm:h-28 bg-white p-1 rounded-md overflow-hidden">
+                      <div className="w-16 h-16 sm:w-28 sm:h-28 bg-white p-1 rounded-md overflow-hidden">
                         <img
                           src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/chrisgomelan"
                           alt="GitHub QR Code"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-[8px] font-black mt-2 tracking-widest opacity-40">SCAN FOR REPO</span>
+                      <span className="text-[7px] sm:text-[8px] font-black mt-2 tracking-widest opacity-40">SCAN FOR REPO</span>
                     </div>
                     <div className="flex flex-col items-center">
-                      <p className="text-[10px] font-black tracking-[0.5em] rotate-90 origin-center translate-y-8 uppercase opacity-60">MORE INFO</p>
-                      <div className="text-3xl mt-4">→</div>
+                      <p className="text-[8px] sm:text-[10px] font-black tracking-[0.5em] rotate-90 origin-center translate-y-6 sm:translate-y-8 uppercase opacity-60">MORE INFO</p>
+                      <div className="text-2xl sm:text-3xl mt-2 sm:mt-4">→</div>
                     </div>
                   </div>
                 </div>
@@ -148,20 +148,20 @@ function About() {
                 <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/cardboard-flat.png')]"></div>
               </div>
             </div>
-            <p className="text-center mt-8 text-xs text-gray-400 font-black uppercase tracking-[0.3em] animate-pulse">Click card to Flip Details</p>
+            <p className="text-center mt-6 sm:mt-8 text-[10px] sm:text-xs text-gray-400 font-black uppercase tracking-[0.3em] animate-pulse whitespace-nowrap">Click card to Flip Details</p>
           </div>
 
           {/* RIGHT: PORTRAIT & QUICK STATS */}
-          <div className="w-full lg:w-[35%] flex flex-col items-center lg:items-start space-y-8">
+          <div className="w-full lg:w-[35%] flex flex-col items-center lg:items-start space-y-8 mt-4 lg:mt-0">
             <FadeInOnScroll className="relative group">
               <div className="absolute inset-0 bg-[#5ba4ca] rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform duration-700 opacity-20"></div>
               <div className="absolute -inset-2 bg-white rounded-[3rem] shadow-xl"></div>
               <img
                 src="/christian.png"
                 alt="Christian Profile"
-                className="relative w-56 h-56 sm:w-72 sm:h-72 object-cover rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-x-8 border-gray-100"
+                className="relative w-48 h-48 sm:w-72 sm:h-72 object-cover rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-x-8 border-gray-100"
               />
-              <div className="absolute bottom-6 -right-4 bg-black text-white px-4 py-2 text-xs font-black skew-x-[-12deg] shadow-xl">
+              <div className="absolute bottom-6 -right-2 sm:-right-4 bg-black text-white px-3 sm:px-4 py-1 sm:py-2 text-[10px] sm:text-xs font-black skew-x-[-12deg] shadow-xl">
                 CHRISTIAN GOMELAN
               </div>
             </FadeInOnScroll>
