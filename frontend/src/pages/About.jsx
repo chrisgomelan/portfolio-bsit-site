@@ -40,7 +40,7 @@ function About() {
       <div className="max-w-6xl mx-auto px-4 relative z-10">
 
         {/* TOP SECTION: THE FLIPPABLE CARD & PORTRAIT */}
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-center lg:items-center mb-20">
+        <div className="flex flex-col lg:flex-row gap-16 sm:gap-12 lg:gap-20 items-center lg:items-center mb-20">
 
           {/* LEFT: ID CARD CONTAINER */}
           <div className="w-full lg:w-[60%] perspective-2000 group">
@@ -152,7 +152,7 @@ function About() {
           </div>
 
           {/* RIGHT: PORTRAIT & QUICK STATS */}
-          <div className="w-full lg:w-[35%] flex flex-col items-center lg:items-start space-y-8 mt-4 lg:mt-0">
+          <div className="w-full lg:w-[35%] flex flex-col items-center lg:items-start space-y-8 mt-12 sm:mt-16 lg:mt-0">
             <FadeInOnScroll className="relative group">
               <div className="absolute inset-0 bg-[#5ba4ca] rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform duration-700 opacity-20"></div>
               <div className="absolute -inset-2 bg-white rounded-[3rem] shadow-xl"></div>
