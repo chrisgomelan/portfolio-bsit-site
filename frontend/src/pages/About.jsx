@@ -90,8 +90,8 @@ function About() {
                         <span className="text-2xl font-light text-black/60">+</span>
                       </div>
                     </div>
-                    <p className="text-[9px] sm:text-[11px] max-w-[280px] leading-[1.3] font-bold text-black/80">
-                      ● This card verifies the holder as a skilled software engineer specializing in modern web ecosystems.
+                    <p className="text-[8px] sm:text-[9px] max-w-[200px] leading-tight font-medium ml-2 opacity-80">
+                      ● Specializing in building scalable web applications with React and Laravel. focused on clean architecture and technical optimization.
                     </p>
                   </div>
                   <div className="text-[12px] font-black bg-black text-[#5ba4ca] px-2 py-0.5 rounded-sm transform -rotate-3">VERIFIED</div>
@@ -108,7 +108,7 @@ function About() {
                         <div className="h-[2px] flex-grow bg-black/20"></div>
                       </div>
                       <p className="text-xs sm:text-sm text-black leading-relaxed font-bold">
-                        Hi, I'm Christian — a web developer based in Taguig City specializing in custom WordPress development, PHP logic, and technical SEO.
+                        Hi, I'm Christian — a web developer based in Taguig City specializing in building modern web applications with React and Laravel, focused on high-performance architecture.
                       </p>
                       <div className="space-y-2">
                         <p className="text-[10px] font-black uppercase opacity-40">Core Expertise</p>
