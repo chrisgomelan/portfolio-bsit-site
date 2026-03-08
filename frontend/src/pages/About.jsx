@@ -61,7 +61,7 @@ function About() {
                     </h2>
                   </div>
                   <div className="text-black text-right hidden sm:block">
-                    <p className="text-[10px] font-black opacity-80 uppercase tracking-widest">(高在賢)</p>
+                    <p className="text-[10px] font-black opacity-80 uppercase tracking-widest">(Web開発者)</p>
                     <p className="text-xs font-black uppercase tracking-tighter mt-1">Full-Stack Dev</p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ function About() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-black opacity-30 tracking-[0.3em] uppercase">Security Level: High</span>
+                      <span className="text-[10px] font-black opacity-30 tracking-[0.3em] uppercase">Simple Man, Simple Life</span>
                     </div>
                   </div>
 
