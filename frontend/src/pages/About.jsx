@@ -168,8 +168,8 @@ function About() {
           </div>
         </div>
 
-        {/* BOTTOM SECTION: DETAILED TIMELINE */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 pt-12 border-t border-gray-200">
+        {/* BOTTOM SECTION: DETAILED TIMELINE (STACKED) */}
+        <div className="max-w-3xl mx-auto space-y-24 pt-12 border-t border-gray-200">
 
           {/* Education */}
           <FadeInOnScroll>
