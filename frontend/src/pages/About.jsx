@@ -57,7 +57,7 @@ function About() {
                       <span className="text-[10px] sm:text-xs font-black border-2 border-black px-2 py-0.5 tracking-tighter bg-white/10">CARD</span>
                     </div>
                     <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-black leading-[0.85] tracking-tighter uppercase">
-                      CHRISTIAN <br /> SALAR
+                      CHRISTIAN <br /> GOMELAN
                     </h2>
                   </div>
                   <div className="text-black text-right hidden sm:block">
@@ -73,16 +73,13 @@ function About() {
                   </div>
                   <div className="border-t border-black/20 pt-2">
                     <p className="text-[8px] sm:text-[10px] font-black uppercase opacity-60 tracking-widest mb-1">Status</p>
-                    <p className="text-xs sm:text-sm font-black text-black uppercase tracking-tight">Active Intern</p>
+                    <p className="text-xs sm:text-sm font-black text-black uppercase tracking-tight">Intern</p>
                   </div>
                   <div className="border-t border-black/20 pt-2">
                     <p className="text-[8px] sm:text-[10px] font-black uppercase opacity-60 tracking-widest mb-1">Location</p>
                     <p className="text-xs sm:text-sm font-black text-black uppercase tracking-tight">Taguig City</p>
                   </div>
-                  <div className="border-t border-black/20 pt-2">
-                    <p className="text-[8px] sm:text-[10px] font-black uppercase opacity-60 tracking-widest mb-1">Exp Rank</p>
-                    <p className="text-xs sm:text-sm font-black text-black uppercase tracking-tight">Junior II</p>
-                  </div>
+
                 </div>
 
                 <div className="flex justify-between items-end mt-8 border-t-2 border-black/10 pt-4">
@@ -131,10 +128,12 @@ function About() {
                   <div className="flex flex-col items-center justify-center gap-6 border-l border-black/10 pl-8">
                     <div className="bg-white p-3 rounded-xl shadow-inner border border-black/5 flex flex-col items-center">
                       {/* QR CODE MOCK */}
-                      <div className="w-20 h-20 sm:w-28 sm:h-28 grid grid-cols-7 grid-rows-7 gap-[2px]">
-                        {[...Array(49)].map((_, i) => (
-                          <div key={i} className={`rounded-[1px] ${((i * i + 7) % 3 === 0 || i % 11 === 0 || [0, 1, 5, 6, 7, 14, 35, 42, 43, 47, 48].includes(i)) ? 'bg-black' : 'bg-transparent'}`}></div>
-                        ))}
+                      <div className="w-20 h-20 sm:w-28 sm:h-28 bg-white p-1 rounded-md overflow-hidden">
+                        <img
+                          src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/chrisgomelan"
+                          alt="GitHub QR Code"
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       <span className="text-[8px] font-black mt-2 tracking-widest opacity-40">SCAN FOR REPO</span>
                     </div>
@@ -163,7 +162,7 @@ function About() {
                 className="relative w-56 h-56 sm:w-72 sm:h-72 object-cover rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-x-8 border-gray-100"
               />
               <div className="absolute bottom-6 -right-4 bg-black text-white px-4 py-2 text-xs font-black skew-x-[-12deg] shadow-xl">
-                ID: 2026-CHRIS
+                CHRISTIAN GOMELAN
               </div>
             </FadeInOnScroll>
           </div>
