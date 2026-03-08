@@ -9,12 +9,12 @@ export default function Chatbot() {
     const messageEndRef = useRef(null);
     const [input, setInput] = useState("");
 
-    const sctrollToBottom = () => {
+    const scrollToBottom = () => {
         messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
     useEffect(() => {
-        sctrollToBottom();
+        scrollToBottom();
     }, [messages]);
 
     const sendMessage = async (e) => {
@@ -88,7 +88,7 @@ export default function Chatbot() {
                         {messages.length === 0 && (
                             <div className="chat-bubble flex items-start">
                                 <img src="/christian.png" alt="Chris" className="w-8 h-8 rounded-full inline-block mr-2" />
-                                <p className="bg-gray-200 p-3 rounded-lg mb-2">Hey! Ask me anything about Christian — his skills, projects, or experience.</p>
+                                <p className="bg-gray-200 p-3 rounded-lg mb-2 text-sm">hey there ask me anything, im christian</p>
                             </div>
                         )}
 

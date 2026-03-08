@@ -7,10 +7,13 @@ import Contact from './pages/Contact'
 import Ojt from './pages/Ojt'
 import Navbar from './components/Navbar.jsx'
 import Chatbot from './components/Chatbot'
+import ScrollToTop from './components/ScrollToTop'
+
 function App() {
-    return (
-    <div className="bg-gray-50 text-gray-900">
+  return (
+    <div className="bg-gray-50 text-gray-900 relative">
       <Navbar />
+      <ScrollToTop />
       <Home />
       <About />
       <Resume />
