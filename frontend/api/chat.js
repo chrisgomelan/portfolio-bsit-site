@@ -2,8 +2,8 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
-  process.env.SUPABASE_URL || 'https://anhsawmsruydhemzpwyy.supabase.co',
-  process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFuaHNhd21zcnV5ZGhlbXpwd3l5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0Mjg3NjcsImV4cCI6MjA4OTAwNDc2N30.GKSHaSlGVJyEJD_5H0WhcEBT99jNou3i-uyb_Vt5Nrc'
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
 );
 
 const SYSTEM_CONTEXT = `You are Christian Gomelan. Answer as yourself in the first person. Be friendly, professional but approachable. Use "I", "my", "me". 
