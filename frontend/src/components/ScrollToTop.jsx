@@ -29,7 +29,7 @@ export default function ScrollToTop() {
     }, []);
 
     return (
-        <div className="fixed bottom-[6.5rem] right-[3.75rem] z-[999]">
+        <div className="fixed bottom-[6.5rem] right-[2.5rem] z-[999]">
             {isVisible && (
                 <button
                     onClick={scrollToTop}
