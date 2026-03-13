@@ -36,7 +36,6 @@ export default async (req) => {
   const apiKey = process.env.GROQ_API_KEY;
 
   if (!apiKey) {
-    console.error("GROQ_API_KEY is not set");
     return new Response(JSON.stringify({ error: "AI API not configured" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
@@ -62,7 +61,6 @@ export default async (req) => {
     });
 
     const data = await response.json();
-    console.log("Groq API response:", JSON.stringify(data, null, 2));
 
     let reply = "No response received";
     if (data.choices && data.choices.length > 0) {
@@ -72,18 +70,16 @@ export default async (req) => {
     }
 
     // Log to Supabase
-    const { error: dbError } = await supabase.from('chat_logs').insert({
+    await supabase.from('chat_logs').insert({
       user_message: message,
       bot_response: reply
     });
-    if (dbError) console.error('Supabase insert error:', dbError);
 
     return new Response(JSON.stringify({ reply }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Groq error:", error);
     return new Response(JSON.stringify({ error: error.message || "Failed to generate response" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },

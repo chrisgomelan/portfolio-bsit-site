@@ -26,7 +26,6 @@ export default async function handler(req, res) {
   }
 
   if (!process.env.GEMINI_API_KEY) {
-    console.error('GEMINI_API_KEY is not set');
     return res.status(500).json({ error: 'Gemini API not configured' });
   }
 
@@ -46,7 +45,6 @@ export default async function handler(req, res) {
     );
 
     const data = await response.json();
-    console.log('Gemini API raw response:', JSON.stringify(data, null, 2));
 
     let reply = 'No response received';
     if (data.candidates && data.candidates.length > 0) {
@@ -55,15 +53,10 @@ export default async function handler(req, res) {
       reply = `Error: ${data.error.message || JSON.stringify(data.error)}`;
     }
 
-    console.log('Supabase URL:', process.env.SUPABASE_URL ? 'set' : 'missing');
-    console.log('Supabase Key:', process.env.SUPABASE_ANON_KEY ? 'set' : 'missing');
-    
-    const { error } = await supabase.from('chat_logs').insert({
+    await supabase.from('chat_logs').insert({
       user_message: message,
       bot_response: reply
     });
-    if (error) console.error('Supabase insert error:', error);
-    else console.log('Chat logged to Supabase');
 
     return res.status(200).json({ reply });
   } catch (error) {
