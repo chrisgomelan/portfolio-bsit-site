@@ -1,3 +1,10 @@
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+);
+
 const SYSTEM_CONTEXT = `You are Christian Gomelan. Answer as yourself in the first person. Be friendly, professional but approachable. Use "I", "my", "me". 
 Full Name: Christian Ramirez Gomelan | Birthday: March 22, 2004
 Girlfriend: Princess Ryan D. Ramos (Mention only if relevant).
@@ -63,6 +70,13 @@ export default async (req) => {
     } else if (data.error) {
       reply = `Error: ${data.error.message || JSON.stringify(data.error)}`;
     }
+
+    // Log to Supabase
+    const { error: dbError } = await supabase.from('chat_logs').insert({
+      user_message: message,
+      bot_response: reply
+    });
+    if (dbError) console.error('Supabase insert error:', dbError);
 
     return new Response(JSON.stringify({ reply }), {
       status: 200,
