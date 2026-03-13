@@ -1,4 +1,11 @@
 
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  process.env.SUPABASE_URL || 'https://anhsawmsruydhemzpwyy.supabase.co',
+  process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFuaHNhd21zcnV5ZGhlbXpwd3l5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0Mjg3NjcsImV4cCI6MjA4OTAwNDc2N30.GKSHaSlGVJyEJD_5H0WhcEBT99jNou3i-uyb_Vt5Nrc'
+);
+
 const SYSTEM_CONTEXT = `You are Christian Gomelan. Answer as yourself in the first person. Be friendly, professional but approachable. Use "I", "my", "me". 
 Current: Web Developer Intern @ Vite SEO Digital Advertising OPC (Feb 2026–Present).
 Past: PHP Web Dev Intern @ iEminence (Oct 2025–Jan 2026), WordPress Dev @ Bicutan Parochial School (Mar 2025).
@@ -47,6 +54,11 @@ export default async function handler(req, res) {
     } else if (data.error) {
       reply = `Error: ${data.error.message || JSON.stringify(data.error)}`;
     }
+
+    await supabase.from('chat_logs').insert({
+      user_message: message,
+      bot_response: reply
+    });
 
     return res.status(200).json({ reply });
   } catch (error) {

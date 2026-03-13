@@ -11,6 +11,29 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ error: 'Invalid email format' });
+  }
+
+  const sanitize = (str) => {
+    if (typeof str !== 'string') return '';
+    return str.replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[char]));
+  };
+
+  const sanitizeSubject = (str) => {
+    if (typeof str !== 'string') return '';
+    return str.replace(/<[^>]*>/g, '');
+  };
+
+  const safeSubjectName = sanitizeSubject(name);
+
+  const safeName = sanitize(name);
+  const safeEmail = sanitize(email);
+  const safeMessage = sanitize(message);
+
   if (!process.env.RESEND_API_KEY) {
     return res.status(500).json({ error: 'RESEND_API_KEY is not set' });
   }
@@ -23,14 +46,14 @@ export default async function handler(req, res) {
       from: 'onboarding@resend.dev',
       to: 'christiangomelan@gmail.com',
       replyTo: email,
-      subject: `New message from ${name}`,
+      subject: `New message from ${safeSubjectName}`,
       html: `
         <div>
           <h2>You have a new message from your portfolio!</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${safeMessage.replace(/\n/g, '<br>')}</p>
         </div>
       `,
     });
@@ -46,10 +69,10 @@ export default async function handler(req, res) {
       subject: 'Thank you for contacting me!',
       html: `
         <div>
-          <h2>Thank you, ${name}!</h2>
+          <h2>Thank you, ${safeName}!</h2>
           <p>I received your message and will get back to you soon.</p>
           <p><strong>Your message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${safeMessage.replace(/\n/g, '<br>')}</p>
         </div>
       `,
     });
