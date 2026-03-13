@@ -55,10 +55,15 @@ export default async function handler(req, res) {
       reply = `Error: ${data.error.message || JSON.stringify(data.error)}`;
     }
 
-    await supabase.from('chat_logs').insert({
+    console.log('Supabase URL:', process.env.SUPABASE_URL ? 'set' : 'missing');
+    console.log('Supabase Key:', process.env.SUPABASE_ANON_KEY ? 'set' : 'missing');
+    
+    const { error } = await supabase.from('chat_logs').insert({
       user_message: message,
       bot_response: reply
     });
+    if (error) console.error('Supabase insert error:', error);
+    else console.log('Chat logged to Supabase');
 
     return res.status(200).json({ reply });
   } catch (error) {
