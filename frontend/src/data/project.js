@@ -175,7 +175,7 @@ export const documents = [
     name: "MOA",
     description: "Memorandum of Agreement between the school and the host company.",
     driveUrl: "",
-    fallbackMessage: "MOA is currently being processed by the school. Submitted to Ma'am Gina (Feb 10, 2026).",
+    fallbackMessage: "The MOA is already approved and can now be picked up.",
     type: "pdf",
   },
   {
