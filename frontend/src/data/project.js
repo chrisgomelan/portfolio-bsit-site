@@ -167,7 +167,7 @@ export const documents = [
     id: 3,
     name: "Recommendation Letter",
     description: "A formal letter endorsing the student for on-the-job training.",
-    driveUrl: "https://drive.google.com/file/d/1Caq9kZ1WiTSOW3V70r7Qxlr2jVjrIuor/preview",
+    driveUrl: "https://drive.google.com/file/d/1Hyb8UKo2wyF99jH3M_OKgGEiPAQYJjwa/preview",
     type: "pdf",
   },
   {
