@@ -255,3 +255,16 @@ export const documents = [
     type: "folder",
   },
 ];
+
+export const internshipPresentation = {
+  title: "Internship Progress Report",
+  description: "A summary of my internship journey, highlighting accomplishments, topics learned, and current progress status.",
+  videoUrl: "https://drive.google.com/file/d/1SIdVqckSF8C0NLgP2AcG8Lget6tkWinK/preview",
+  highlights: [
+    "Individual Accomplishments Report",
+    "Number of Hours Completed",
+    "Learned Topics & Skills",
+    "Problems Encountered & Solutions",
+    "MOA (Memorandum of Agreement) Status"
+  ]
+};
