@@ -1,24 +1,37 @@
 import { documents } from "@/data/project";
 import Dialog, { DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
-import { Folder, FileX } from "lucide-react";
+import { Folder, FileX, ArrowLeft } from "lucide-react";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 
 function Ojt() {
 
     const [open, setOpen] = useState(false);
     const [selectedDoc, setSelectedDoc] = useState(null);
+    const [selectedWeek, setSelectedWeek] = useState(null);
 
     const handleFileClick = (doc) => {
         setSelectedDoc(doc);
         setOpen(true);
+        setSelectedWeek(null);
     }
 
     const handleClose = (open) => {
         if(!open) {
             setOpen(false);
             setSelectedDoc(null);
+            setSelectedWeek(null);
         }
+    }
+
+    const handleWeekClick = (week) => {
+        if (week.driveUrl) {
+            setSelectedWeek(week);
+        }
+    }
+
+    const handleBackToOverview = () => {
+        setSelectedWeek(null);
     }
 
     return (
@@ -43,14 +56,51 @@ function Ojt() {
         {
             selectedDoc && (
                  <Dialog open={open} onOpenChange={handleClose}>
-                    <DialogContent className="max-w-4xl w-[90vw]">
-                    <DialogTitle>{selectedDoc.name}</DialogTitle>
-                    <p className="text-sm text-gray-500 -mt-2">{selectedDoc.description}</p>
-                    {selectedDoc.driveUrl && !selectedDoc.driveUrl.includes("YOUR_FILE_ID") ? (
+                    <DialogContent className="max-w-4xl w-[95vw] sm:w-[90vw]">
+                    <div className="flex items-center gap-3">
+                        {selectedWeek && (
+                            <button 
+                                onClick={handleBackToOverview}
+                                className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                            >
+                                <ArrowLeft className="w-5 h-5 text-gray-600" />
+                            </button>
+                        )}
+                        <div>
+                            <DialogTitle>{selectedWeek ? `Week ${selectedWeek.week} - ${selectedDoc.name}` : selectedDoc.name}</DialogTitle>
+                            <p className="text-sm text-gray-500">{selectedWeek ? `Viewing report for Week ${selectedWeek.week}` : selectedDoc.description}</p>
+                        </div>
+                    </div>
+
+                    {selectedDoc.weeks && !selectedWeek ? (
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 max-h-[70vh] overflow-y-auto">
+                        {selectedDoc.weeks.map((week) => (
+                          <div
+                            key={week.week}
+                            onClick={() => handleWeekClick(week)}
+                            className={`flex flex-col items-center p-4 border rounded-lg transition-all bg-gray-50/50 ${
+                                week.driveUrl ? "hover:border-yellow-500 cursor-pointer shadow-sm" : "opacity-75"
+                            }`}
+                          >
+                            <span className="text-lg font-bold text-gray-700">Week {week.week}</span>
+                            <span className={`text-[10px] mt-1 px-2 py-0.5 rounded-full ${
+                              week.status === "Completed" ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"
+                            }`}>
+                              {week.status}
+                            </span>
+                            {week.driveUrl ? (
+                              <span className="mt-3 text-xs text-blue-600 font-medium">View Preview</span>
+                            ) : (
+                              <span className="mt-3 text-[10px] text-gray-400 italic">Not yet available</span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    ) : selectedWeek || (selectedDoc.driveUrl && !selectedDoc.driveUrl.includes("YOUR_FILE_ID")) ? (
                       <iframe
-                        src={selectedDoc.driveUrl}
-                        className="w-full h-[80vh] border-0 rounded"
-                        title={selectedDoc.name}
+                        src={selectedWeek ? selectedWeek.driveUrl : selectedDoc.driveUrl}
+                        className="w-full h-[75vh] border-0 rounded"
+                        title={selectedWeek ? `Week ${selectedWeek.week}` : selectedDoc.name}
                         allow="autoplay; encrypted-media"
                         allowFullScreen
                       />

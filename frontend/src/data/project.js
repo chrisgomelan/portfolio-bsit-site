@@ -45,15 +45,15 @@ export const experiences = [
 ];
 
 export const education = [
-    {
-        id: 1,
-        degree: "Bachelor of Science in Information Technology",
-        institution: "Polytechnic University of the Philippines - Taguig Branch",
-        location: "Taguig City, PH",
-        startDate: "2022",
-        endDate: "2026",
-    
-    }
+  {
+    id: 1,
+    degree: "Bachelor of Science in Information Technology",
+    institution: "Polytechnic University of the Philippines - Taguig Branch",
+    location: "Taguig City, PH",
+    startDate: "2022",
+    endDate: "2026",
+
+  }
 ]
 
 export const projects = [
@@ -215,5 +215,43 @@ export const documents = [
     description: "Letter from the host company accepting the student for internship.",
     driveUrl: "https://drive.google.com/file/d/10VRA2PNrPyDQ0tCRgYeHs_jnNbLAVlbB/preview",
     type: "pdf",
+  },
+  {
+    id: 10,
+    name: "Good Moral",
+    description: "Certification of good moral character from the university.",
+    driveUrl: "https://drive.google.com/file/d/1LdMueeYU8v3fQzDDjTiN-WK98HU2dnsM/preview",
+    fallbackMessage: "Good Moral certificate will be uploaded soon.",
+    type: "pdf",
+  },
+  {
+    id: 11,
+    name: "Training Partner Sheet",
+    description: "Details and contact information of the OJT training partner.",
+    driveUrl: "https://docs.google.com/document/d/1LsT-76faOpZ4Wjmvq_o-xGytx-fhDsDe/preview",
+    fallbackMessage: "Training Partner Sheet is being finalized.",
+    type: "pdf",
+  },
+  {
+    id: 12,
+    name: "Weekly Accomplishment Report",
+    description: "Weekly logs of tasks, learnings, and progress during the internship.",
+    driveUrl: "",
+    weeks: [
+      { week: 1, driveUrl: "https://drive.google.com/file/d/14GBUoQxF0duXUJRFb8r4z6yWFN2c39Xe/preview", status: "Pending" },
+      { week: 2, driveUrl: "https://drive.google.com/file/d/10dPd3NcyRCHZys5W3Ni_NAsOWMljdNPc/preview", status: "Pending" },
+      { week: 3, driveUrl: "https://drive.google.com/file/d/1OhCOZ9vBpAqvN8d3L4jQk23D_Mt5D_us/preview", status: "Pending" },
+      { week: 4, driveUrl: "", status: "Pending" },
+      { week: 5, driveUrl: "", status: "Pending" },
+      { week: 6, driveUrl: "", status: "Pending" },
+      { week: 7, driveUrl: "", status: "Pending" },
+      { week: 8, driveUrl: "", status: "Pending" },
+      { week: 9, driveUrl: "", status: "Pending" },
+      { week: 10, driveUrl: "", status: "Pending" },
+      { week: 11, driveUrl: "", status: "Pending" },
+      { week: 12, driveUrl: "", status: "Pending" },
+      { week: 13, driveUrl: "", status: "Pending" },
+    ],
+    type: "folder",
   },
 ];
