@@ -238,9 +238,9 @@ export const documents = [
     description: "Weekly logs of tasks, learnings, and progress during the internship.",
     driveUrl: "",
     weeks: [
-      { week: 1, driveUrl: "https://drive.google.com/file/d/14GBUoQxF0duXUJRFb8r4z6yWFN2c39Xe/preview", status: "Pending" },
-      { week: 2, driveUrl: "https://drive.google.com/file/d/10dPd3NcyRCHZys5W3Ni_NAsOWMljdNPc/preview", status: "Pending" },
-      { week: 3, driveUrl: "https://drive.google.com/file/d/1OhCOZ9vBpAqvN8d3L4jQk23D_Mt5D_us/preview", status: "Pending" },
+      { week: 1, driveUrl: "https://drive.google.com/file/d/14GBUoQxF0duXUJRFb8r4z6yWFN2c39Xe/preview", status: "Completed" },
+      { week: 2, driveUrl: "https://drive.google.com/file/d/10dPd3NcyRCHZys5W3Ni_NAsOWMljdNPc/preview", status: "Completed" },
+      { week: 3, driveUrl: "https://drive.google.com/file/d/1OhCOZ9vBpAqvN8d3L4jQk23D_Mt5D_us/preview", status: "Completed" },
       { week: 4, driveUrl: "", status: "Pending" },
       { week: 5, driveUrl: "", status: "Pending" },
       { week: 6, driveUrl: "", status: "Pending" },
