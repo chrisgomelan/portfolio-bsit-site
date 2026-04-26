@@ -174,8 +174,7 @@ export const documents = [
     id: 4,
     name: "MOA",
     description: "Memorandum of Agreement between the school and the host company.",
-    driveUrl: "",
-    fallbackMessage: "The MOA is already approved and can now be picked up.",
+    driveUrl: "https://drive.google.com/file/d/1PP4gNSLnl-szxfsq6tRHn0n9n0tQabLN/preview",
     type: "pdf",
   },
   {
