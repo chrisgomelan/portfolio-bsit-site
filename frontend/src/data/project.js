@@ -245,7 +245,7 @@ export const documents = [
       { week: 6, driveUrl: "https://drive.google.com/file/d/1NNqioJqe18ZJw0ANzi_74soAv3S4tRmc/preview", status: "Completed" },
       { week: 7, driveUrl: "https://drive.google.com/file/d/16VrsU_TJsXmr0apcOkfiKSdxjZS-GjP2/preview", status: "Completed" },
       { week: 8, driveUrl: "https://drive.google.com/file/d/1ryc-mxNRWqrydWQeC0hxGh6uG7bAJC4T/preview", status: "Completed" },
-      { week: 9, driveUrl: "https://drive.google.com/file/d/151i5ZaV4UCQLC2u74BLLTIzBWhlXVrEz/preview", status: "Pending" },
+      { week: 9, driveUrl: "https://drive.google.com/file/d/151i5ZaV4UCQLC2u74BLLTIzBWhlXVrEz/preview", status: "Completed" },
       { week: 10, driveUrl: "https://drive.google.com/file/d/1wYBM8DoKYrnhxnkxF8tSN3b_mv0OP2l0/preview", status: "Completed" },
       { week: 11, driveUrl: "", status: "Pending" },
       { week: 12, driveUrl: "", status: "Pending" },
