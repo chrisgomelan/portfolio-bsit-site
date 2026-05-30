@@ -256,15 +256,13 @@ export const documents = [
 ];
 
 export const internshipPresentation = {
-  title: "Internship Progress Report",
-  description: "A summary of my completed internship journey, highlighting accomplishments, topics learned, and final progress status.",
-  videoUrl: "https://drive.google.com/file/d/1SIdVqckSF8C0NLgP2AcG8Lget6tkWinK/preview",
+  title: "Final Internship Presentation Video",
+  description: "A short presentation covering my internship experience, progress, and key learnings.",
+  videoUrl: "https://drive.google.com/file/d/1WRsX2wKX_9nv5KZt9Grg9aYHMLjJwLnU/preview",
   highlights: [
-    "Individual Accomplishments Report",
-    "Number of Hours Completed",
-    "Learned Topics & Skills",
-    "Problems Encountered & Solutions",
-    "MOA (Memorandum of Agreement) Status",
+    "Figma-to-Web Conversion & Core Business Logic for E-Commerce and Booking Systems",
+    "Full Satisfaction of Required Technical Training Hours Under the Engineering Division",
+    "Advanced PHP, WooCommerce Customization, Google Lighthouse Auditing, and SEO Masterplan Alignment",
     "Internship Completed on May 22, 2026"
   ]
 };
