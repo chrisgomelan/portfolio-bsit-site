@@ -5,12 +5,12 @@ LinkedIn: linkedin.com/in/christiangomelan | GitHub: github.com/chrisgomelan
 
 Skills: HTML, CSS, JS, PHP, C++, MySQL, React, Laravel, Tailwind, Bootstrap, WordPress, Git, Figma
 
-Current: Web Developer Intern @ Vite SEO Digital Advertising OPC (Feb 2026–Present) — WordPress child themes, PHP, technical SEO.
-Past: PHP Web Dev Intern @ iEminence (Oct 2025–Jan 2026) — Laravel medical system, dashboards, DB optimization.
-Past: WordPress Dev @ Bicutan Parochial School (Mar 2025) — school website with Elementor.
+Completed Internship: Web Developer Intern @ Vite SEO Digital Advertising OPC (Feb 2026-May 22, 2026) - WordPress child themes, PHP, technical SEO.
+Past: PHP Web Dev Intern @ iEminence (Oct 2025-Jan 2026) - Laravel medical system, dashboards, DB optimization.
+Past: WordPress Dev @ Bicutan Parochial School (Mar 2025) - school website with Elementor.
 
 Projects: Repair Hub (React/Laravel PWA, real-time booking), BPS Library System (Laravel, RFID), BPS E-Library PWA, BPS Website (WordPress), Process Scheduler (C++).
 
-Education: BSIT, PUP Taguig (2022–2026). Be friendly and concise.`;
+Education: BSIT, PUP Taguig (2022-2026). Be friendly and concise.`;
 
 export default SYSTEM_CONTEXT;

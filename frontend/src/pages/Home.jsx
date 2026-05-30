@@ -1,6 +1,7 @@
-import { Boxes } from "@/components/ui/background-boxes"
+import { Boxes } from "@/components/ui/background-boxes";
 import { TextType } from "@/components/ui/text-type";
 import { FadeInOnScroll } from "../components/ui/fade-in-on-scroll";
+
 function Home() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
@@ -8,7 +9,7 @@ function Home() {
       <FadeInOnScroll className="relative  text-center px-3 sm:px-4 md:px-6">
         <h1 className="mb-4 sm:mb-6 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
           <TextType
-text={["Hey, I'm Christian.", "Crafting scalable web solutions", "Let's build something exceptional together"]}
+            text={["Hey, I'm Christian.", "Crafting scalable web solutions", "Let's build something exceptional together"]}
             typingSpeed={40}
             deletingSpeed={20}
             pauseDuration={1500}
@@ -24,7 +25,7 @@ text={["Hey, I'm Christian.", "Crafting scalable web solutions", "Let's build so
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            Hired — Web Developer Intern at Vite SEO
+            Internship Completed on May 22, 2026 at Vite SEO
           </span>
         </div>
         <p className="mb-6 sm:mb-8 md:mb-12 max-w-2xl text-sm sm:text-base md:text-lg text-gray-100 mx-auto">
@@ -35,7 +36,7 @@ text={["Hey, I'm Christian.", "Crafting scalable web solutions", "Let's build so
         </a>
       </FadeInOnScroll>
     </section>
-  )
+  );
 }
 
-export default Home
+export default Home;

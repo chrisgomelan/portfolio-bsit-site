@@ -5,12 +5,12 @@ export const experiences = [
     company: "Vite SEO Digital Advertising OPC",
     location: "Philippines",
     startDate: "February 2026",
-    endDate: null,
-    duration: "Present",
+    endDate: "May 22, 2026",
+    duration: "Completed",
     description: [
       "Specializing in custom WordPress development with child themes and PHP logic.",
       "Applying technical SEO best practices to build high-performing, search-optimized websites.",
-      "Collaborating with the team on client projects and site optimization."
+      "Completed the internship program and contributed to client projects and site optimization through May 22, 2026."
     ],
     technologies: ["WordPress", "PHP", "SEO", "HTML", "CSS", "JavaScript"]
   },
@@ -188,8 +188,7 @@ export const documents = [
     id: 6,
     name: "DTR",
     description: "Daily Time Record tracking attendance and working hours.",
-    driveUrl: "",
-    fallbackMessage: "DTR will be available soon",
+    driveUrl: "https://drive.google.com/file/d/1wbbWKjp1soN2aUDvTlAyfopuBR0Jrq1v/preview",
     type: "pdf",
   },
   {
@@ -204,8 +203,7 @@ export const documents = [
     id: 8,
     name: "Certificate of Completion",
     description: "Official certificate confirming completion of the OJT program.",
-    driveUrl: "",
-    fallbackMessage: "Certificate will be issued after completing all OJT hours.",
+    driveUrl: "https://drive.google.com/file/d/1lO6j5g-idpxVHeKWJswP8t-5CcAFxaJW/preview",
     type: "pdf",
   },
   {
@@ -234,7 +232,7 @@ export const documents = [
   {
     id: 12,
     name: "Weekly Accomplishment Report",
-    description: "Weekly logs of tasks, learnings, and progress during the internship.",
+    description: "Weekly logs of tasks, learnings, and completed progress during the internship.",
     driveUrl: "",
     weeks: [
       { week: 1, driveUrl: "https://drive.google.com/file/d/14GBUoQxF0duXUJRFb8r4z6yWFN2c39Xe/preview", status: "Completed" },
@@ -247,10 +245,11 @@ export const documents = [
       { week: 8, driveUrl: "https://drive.google.com/file/d/1ryc-mxNRWqrydWQeC0hxGh6uG7bAJC4T/preview", status: "Completed" },
       { week: 9, driveUrl: "https://drive.google.com/file/d/151i5ZaV4UCQLC2u74BLLTIzBWhlXVrEz/preview", status: "Completed" },
       { week: 10, driveUrl: "https://drive.google.com/file/d/1wYBM8DoKYrnhxnkxF8tSN3b_mv0OP2l0/preview", status: "Completed" },
-      { week: 11, driveUrl: "", status: "Pending" },
-      { week: 12, driveUrl: "", status: "Pending" },
-      { week: 13, driveUrl: "", status: "Pending" },
-      { week: 14, driveUrl: "", status: "Pending" },
+      { week: 11, driveUrl: "https://drive.google.com/file/d/1zMWSFpDX3l2m2sDwzJTPH0YKTETpUhsL/preview", status: "Completed" },
+      { week: 12, driveUrl: "https://drive.google.com/file/d/1KNJG5b9-ai3_6Mo_V73PmwMoUBjVC5bH/preview", status: "Completed" },
+      { week: 13, driveUrl: "https://drive.google.com/file/d/1ZP8JRnhp6YGVqF0_bHvXacKnuCs9a14g/preview", status: "Completed" },
+      { week: 14, driveUrl: "https://drive.google.com/file/d/19vEzVUHsF_3sDmsjfTURzOBkyHa9IZJb/preview", status: "Completed" },
+      { week: 15, driveUrl: "https://drive.google.com/file/d/1oUP5gR9CTH_tTiRHhdyN0NWMD9_8dZLD/preview", status: "Completed" },
     ],
     type: "folder",
   },
@@ -258,13 +257,14 @@ export const documents = [
 
 export const internshipPresentation = {
   title: "Internship Progress Report",
-  description: "A summary of my internship journey, highlighting accomplishments, topics learned, and current progress status.",
+  description: "A summary of my completed internship journey, highlighting accomplishments, topics learned, and final progress status.",
   videoUrl: "https://drive.google.com/file/d/1SIdVqckSF8C0NLgP2AcG8Lget6tkWinK/preview",
   highlights: [
     "Individual Accomplishments Report",
     "Number of Hours Completed",
     "Learned Topics & Skills",
     "Problems Encountered & Solutions",
-    "MOA (Memorandum of Agreement) Status"
+    "MOA (Memorandum of Agreement) Status",
+    "Internship Completed on May 22, 2026"
   ]
 };

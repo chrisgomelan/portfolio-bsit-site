@@ -73,7 +73,7 @@ function About() {
                   </div>
                   <div className="border-t border-black/20 pt-2">
                     <p className="text-[8px] sm:text-[10px] font-black uppercase opacity-60 tracking-widest mb-1">Status</p>
-                    <p className="text-xs sm:text-sm font-black text-black uppercase tracking-tight">Intern</p>
+                    <p className="text-xs sm:text-sm font-black text-black uppercase tracking-tight">OJT Completed</p>
                   </div>
                   <div className="border-t border-black/20 pt-2">
                     <p className="text-[8px] sm:text-[10px] font-black uppercase opacity-60 tracking-widest mb-1">Location</p>
